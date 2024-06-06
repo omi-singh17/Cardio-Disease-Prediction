@@ -30,7 +30,7 @@ Based on approximately 35,000 participants the biggest driving factor in assessi
 
 Out of the 1114 positive test cases, our prediction model correctly identified 948 as potential risk cases. Correctly catching risk cases 85% of the time. Leading to an inexpensive and solid initial screening method.
 
-![A graph of a diagram Description automatically generated with medium confidence](media/e566f323ec8cc18f3320e6e29d8c4406.png)
+![A graph of a diagram Description automatically generated with medium confidence](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/2-class%20Random%20Forest%20Confusion%20Matrix.png?raw=true)
 
 *(Model performance during testing)*
 
@@ -75,7 +75,9 @@ Key data cleaning steps:
 
 At the end of the data-cleaning step, we had 34,022 entries with 29 columns (including our target label). We also note that only 11% of participants have experienced a cardiovascular event, making our data and problem an imbalanced one.
 
-![](media/5b1e3d7ed0446c9a3e87f2d409f23637.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/assets/84879963/e2a26aa2-dbc0-450e-9b36-5f992b8980db)
+
+
 
 ## 5. Exploratory Data Analysis
 
@@ -85,19 +87,19 @@ This step was carried out in 4 parts: Statistical Summary, Numerical Features, C
 
 We noted the average age of participants at 50. However, the most common age of participants was around 80. We also noted that the number of days since a person quit smoking is right skewed with fewer and fewer members quitting smoking for a larger number of days.
 
-![](media/b818dbba4694b85f8822375dd25eed44.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/EDA%20Histplot.png?raw=true)
 
 During the exploration of categorical features, we noted that we have a good mix of both genders. The most common ethnicity is 'Non-Hispanic White' while the most common marital status is 'Married'.
 
-![](media/64e6d474b42b80b94a7e0a53d48bbc16.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/EDA%20Countplot.png?raw=true)
 
 The correlation between age and heart issues jumped out in the pair plots. We also noticed a high correlation between some of the features, such as total cholesterol and bad cholesterol, or waist size and BMI. The median age of participants with heart issues lies in the late 60s, while the median age of participants without a heart issue lies in the 40s.
 
-![A graph with a blue and orange rectangle Description automatically generated with medium confidence](media/085b5f0baafb879ffe9b7d94a125646d.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/EDA%20Boxplot.png?raw=true)
 
 It was also interesting to note some other features that showed a correlation with age. As an example, the systolic blood pressure range tends to increase with age.
 
-![A screenshot of a graph Description automatically generated](media/3c8dd63e621f962036da2b19aad4c5b1.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/EDA%20Hexabin.png?raw=true)
 
 At the end of Exploratory Data Analysis, we dropped the body fat column due to a high number of missing values and the column showing a high correlation with total cholesterol. Post EDA we have 34,022 entries and 22 columns (including our target label).
 
@@ -127,7 +129,7 @@ On the other hand, for income brackets, Ordinal Encoding was used to retain the 
 
 The data values were scaled using a Standard Scaler which sets the mean for each feature at 0 and scales them to a unit variance.
 
-![A diagram of a computer Description automatically generated](media/c1a69e694a6a258d8f7002a13ed67843.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Preprocessing%20Pipeline.png?raw=true)
 
 ## 7. Modeling – Evaluation and Selection
 
@@ -150,17 +152,17 @@ We used the Grid Search technique to do cross-validation and hyperparameter tuni
 
 The following parameters led to the best Random Forest model.
 
-![A white background with black text Description automatically generated](media/895609f789177c2d832c3f3648a78af3.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Model%20Best%20Params.png?raw=true)
 
 Plus, age was again noted as the most important feature of this model.
 
 Due to one hot encoding certain marital status jumped ahead in importance scale, indicating overall the relevance of marital status.
 
-![A graph with blue and white bars Description automatically generated](media/6f50233e19322159d6c76edf1cd3bd4d.png)
+!(https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Model%20Important%20Features.png?raw=true)
 
 Noting the test performance of our best Random Forest model below.
 
-![](media/15167606a136ca84be0431ed5bab4ad0.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Model%20Test%20Performance.png?raw=true)
 
 ## 8. Conclusion
 
@@ -168,7 +170,7 @@ After selecting the best model, we combine our preprocessing pipeline and classi
 
 The new data can be entered for preprocessing and prediction straight away.
 
-![](media/1243adb5682c72fbcb6c085665af0125.png)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/assets/84879963/99ed6057-e475-48f4-b5a8-8370137cf2e7)
 
 We ended with a model showing a recall score of 0.85 and an f1 score of 0.36.
 
