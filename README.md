@@ -1,22 +1,24 @@
-Contents
 
-[Summary](#summary)
 
-[Background](#background)
+## Contents
 
-[The Process](#the-process)
+1. [Summary](#summary)
 
-[Data Collection and Cleaning](#data-collection-and-cleaning)
+2. [Background](#background)
 
-[Exploratory Data Analysis](#exploratory-data-analysis)
+3. [The Process](#the-process)
 
-[Preprocessing Pipeline](#preprocessing-pipeline)
+4. [Data Collection and Cleaning](#data-collection-and-cleaning)
 
-[Modeling – Evaluation and Selection](#modeling--evaluation-and-selection)
+5. [Exploratory Data Analysis](#exploratory-data-analysis)
 
-[Conclusion](#conclusion)
+6. [Preprocessing Pipeline](#preprocessing-pipeline)
 
-# Summary
+7. [Modeling – Evaluation and Selection](#modeling--evaluation-and-selection)
+
+8. [Conclusion](#conclusion)
+
+## 1. Summary
 
 The project involved combining 5 common heart issues such as heart attack, stroke, or angina into one main target Cardiovascular event.
 
@@ -34,7 +36,7 @@ Out of the 1114 positive test cases, our prediction model correctly identified 9
 
 We have a strong classification model for initial screening. The questionnaire for screening will consist of 21 input factors which are revealed in further detail during the Process section of the report. Based on this questionnaire an initial risk assessment can be performed at home or a clinic.
 
-# Background
+## 2. Background
 
 We live in an age where data is readily available, from smartphones to digital watches. The amount of information available at our fingertips is increasing, this project aims to make that information relevant by bringing in risk assessment features.
 
@@ -44,7 +46,7 @@ Being able to quickly analyze our heart health can lead to a more informed patie
 
 With 85% of risk cases being identified as a concern correctly, we can stay on top of our heart health within minutes at home or a medical clinic.
 
-# The Process
+## 3. The Process
 
 We have followed a standard Data Science Project Methodology. After identifying the goal of the project as a classification predictive model.
 
@@ -61,7 +63,7 @@ Data Steps:
 
 Overall, the sequence of steps was in the above order. However, as needed the data cleaning step was revisited during the EDA and preprocessing steps.
 
-## Data Collection and Cleaning
+## 4. Data Collection and Cleaning
 
 Our data source was a total of 60 files from the CDC website. As such, the first step was collecting and combining the data into one data frame or table. All initial column names needed an update.  
   
@@ -75,7 +77,7 @@ At the end of the data-cleaning step, we had 34,022 entries with 29 columns (inc
 
 ![](media/5b1e3d7ed0446c9a3e87f2d409f23637.png)
 
-## Exploratory Data Analysis
+## 5. Exploratory Data Analysis
 
 The goal of Exploratory Data Analysis (EDA) is to gain valuable intuition of the data. This step is crucial for building an understanding of the dataset and getting a feel of the big picture, as it is harder to appreciate these relations once we dive into modeling algorithms or cross-validations.
 
@@ -99,7 +101,7 @@ It was also interesting to note some other features that showed a correlation wi
 
 At the end of Exploratory Data Analysis, we dropped the body fat column due to a high number of missing values and the column showing a high correlation with total cholesterol. Post EDA we have 34,022 entries and 22 columns (including our target label).
 
-## Preprocessing Pipeline
+## 6. Preprocessing Pipeline
 
 The preprocessing step started with the splitting of available data into training and testing data. 70% of the data was used to train models while 30% of data was to test them.
 
@@ -127,7 +129,7 @@ The data values were scaled using a Standard Scaler which sets the mean for each
 
 ![A diagram of a computer Description automatically generated](media/c1a69e694a6a258d8f7002a13ed67843.png)
 
-## Modeling – Evaluation and Selection
+## 7. Modeling – Evaluation and Selection
 
 The project is centered around identifying risk cases, as such missing a potential true positive will be a big drawback.
 
@@ -160,7 +162,7 @@ Noting the test performance of our best Random Forest model below.
 
 ![](media/15167606a136ca84be0431ed5bab4ad0.png)
 
-# Conclusion
+## 8. Conclusion
 
 After selecting the best model, we combine our preprocessing pipeline and classifier into one production-ready pipeline.
 
