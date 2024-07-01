@@ -152,7 +152,7 @@ We used the Grid Search technique to do cross-validation and hyperparameter tuni
 
 The following parameters led to the best Random Forest model.
 
-![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Model%20Best%20Params.png?raw=true)
+![](https://github.com/omi-singh17/Cardio-Disease-Prediction/blob/main/Project%20Report%20and%20Presentation/Image%20Library/Model%20Test%20Performance.png?raw=true)
 
 Plus, age was again noted as the most important feature of this model.
 
